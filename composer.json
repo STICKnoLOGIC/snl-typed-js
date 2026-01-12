@@ -1,0 +1,21 @@
+{
+  "name": "sticknologic/snl-typed-js",
+  "description": "Blade component to render typing animation",
+  "type": "library",
+  "license": "GNU GPL v3",
+  "autoload": {
+    "psr-4": {
+      "SticknoLogic\\SnlType\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "SticknoLogic\\SnlType\\SnlTypeServiceProvider"
+      ]
+    }
+  },
+  "require": {
+    "php": "^8.1"
+  }
+}
