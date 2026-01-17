@@ -38,7 +38,7 @@
     "phpunit/phpunit": "^10.0|^11.0"
   },
   "scripts": {
-    "test": "vendor/bin/phpunit",
+    "test": "vendor/bin/phpunit --no-coverage",
     "test-coverage": "vendor/bin/phpunit --coverage-html build/coverage"
   }
 }

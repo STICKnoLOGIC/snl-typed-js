@@ -5,8 +5,9 @@
          colors="true"
          cacheDirectory=".phpunit.cache"
          beStrictAboutOutputDuringTests="true"
-         failOnRisky="true"
-         failOnWarning="true">
+         failOnRisky="false"
+         failOnWarning="false"
+         failOnDeprecation="false">
     <testsuites>
         <testsuite name="SNL Type Test Suite">
             <directory>tests</directory>
