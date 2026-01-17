@@ -32,9 +32,9 @@
     <span id="{{ $id }}"></span>
 </div>
 @if($useSlot)
-    <span id="snl-{{ $id }}" style="display: none;">
-        {!! $slotContent !!}
-    </span>
+<span id="snl-{{ $id }}" style="display: none;">
+    {!! $slotContent !!}
+</span>
 @endif
 
 <script>
