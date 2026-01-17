@@ -17,6 +17,11 @@
       "SticknoLogic\\SnlType\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "SticknoLogic\\SnlType\\Tests\\": "tests/"
+    }
+  },
   "extra": {
     "laravel": {
       "providers": [
@@ -31,5 +36,9 @@
   "require-dev": {
     "orchestra/testbench": "^8.0|^9.0",
     "phpunit/phpunit": "^10.0|^11.0"
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html build/coverage"
   }
 }
