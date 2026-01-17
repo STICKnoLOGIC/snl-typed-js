@@ -6,7 +6,7 @@
   "keywords": ["laravel", "blade", "component", "typed", "typing-animation"],
   "authors": [
     {
-      "name": "SticknoLogic",
+      "name": "John Aerial J. Azcune",
       "email": "JohnAerial.packagist@sticknologic.is-a.dev",
       "homepage": "http://sticknologic.is-a.dev",
       "role": "Developer"
@@ -25,7 +25,7 @@
     }
   },
   "require": {
-    "php": "^8.0|^8.1|^8.2|^8.3",
+    "php": "^8.1",
     "laravel/framework": "^10.0|^11.0|^12.0|^13.0"
   },
   "require-dev": {

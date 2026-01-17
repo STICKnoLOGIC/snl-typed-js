@@ -14,7 +14,7 @@ A Laravel Blade component package for creating beautiful typing animations using
 ## Requirements
 
 - PHP 8.1 or higher
-- Laravel 10.x or 11.x
+- Laravel 10.x, 11.x, 12.x, or 13.x
 
 ## Installation
 
