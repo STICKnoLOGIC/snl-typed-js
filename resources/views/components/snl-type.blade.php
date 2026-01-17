@@ -28,7 +28,7 @@
     $finalStrings = $useSlot ? [] : $strings;
 @endphp
 
-<div {{ $class ? "class='{$class}'" : '' }} style="{{ $fontSize ? "font-size: {$fontSize}; " : '' }}{{ $color ? "color: {$color}; " : '' }}">
+<div @if($class) class="{{ $class }}" @endif style="{{ $fontSize ? "font-size: {$fontSize}; " : '' }}{{ $color ? "color: {$color}; " : '' }}">
     <span id="{{ $id }}"></span>
 </div>
 @if($useSlot)
