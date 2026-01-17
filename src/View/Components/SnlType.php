@@ -5,6 +5,7 @@ namespace SticknoLogic\SnlType\View\Components;
 use Illuminate\Support\Str;
 use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
+use InvalidArgumentException;
 
 /**
  * SnlType Blade Component
@@ -26,6 +27,7 @@ class SnlType extends Component
     public ?string $fontSize;
     public ?string $color;
     public ?string $cursor;
+    public ?string $class;
     public bool $hasSlotContent = false;
 
     /**
@@ -44,6 +46,7 @@ class SnlType extends Component
      * @param string|null $fontSize Font size CSS value
      * @param string|null $color Text color CSS value
      * @param string|null $cursor Custom cursor character
+     * @param string|null $class CSS class names for the container div
      */
     public function __construct(
         ?string $id = null,
@@ -58,9 +61,17 @@ class SnlType extends Component
         ?int $backDelay = null,
         ?string $fontSize = null,
         ?string $color = null,
-        ?string $cursor = null
+        ?string $cursor = null,
+        ?string $class = null
     ) {
-        $this->id = $id ?? Str::random(4);
+        // Validate custom ID starts with a letter
+        if ($id !== null && !preg_match('/^[a-zA-Z]/', $id)) {
+            throw new InvalidArgumentException(
+                "The 'id' attribute must start with an alphabetic character. Received: '{$id}'"
+            );
+        }
+        
+        $this->id = $id ?? 'z' . Str::random(3);
         $this->strings = is_string($strings) ? [$strings] : ($strings ?? []);
         $this->smartBackspace = $smartBackspace ?? true;
         $this->shuffle = $shuffle ?? false;
@@ -73,6 +84,7 @@ class SnlType extends Component
         $this->fontSize = $fontSize;
         $this->color = $color;
         $this->cursor = $cursor;
+        $this->class = $class;
     }
 
     /**
