@@ -213,7 +213,7 @@ This package is open-sourced software licensed under the [GPL-3.0 license](LICEN
 ## Credits
 
 - Built with [Typed.js](https://github.com/mattboldt/typed.js/)
-- Maintained by [SticknoLogic](https://sticknologic.com)
+- Maintained by [SticknoLogic](https://sticknologic.is-a.dev)
 
 ## Technical Details
 
