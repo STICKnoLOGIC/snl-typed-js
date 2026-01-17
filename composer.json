@@ -1,8 +1,17 @@
 {
   "name": "sticknologic/snl-typed-js",
-  "description": "Blade component to render typing animation",
+  "description": "Blade component to render typing animation using Typed.js library",
   "type": "library",
-  "license": "GNU GPL v3",
+  "license": "GPL-3.0-or-later",
+  "keywords": ["laravel", "blade", "component", "typed", "typing-animation"],
+  "authors": [
+    {
+      "name": "SticknoLogic",
+      "email": "JohnAerial.packagist@sticknologic.is-a.dev",
+      "homepage": "http://sticknologic.is-a.dev",
+      "role": "Developer"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "SticknoLogic\\SnlType\\": "src/"
@@ -16,6 +25,13 @@
     }
   },
   "require": {
-    "php": "^8.1"
-  }
+    "php": "^8.0|^8.1|^8.2|^8.3",
+    "laravel/framework": "^10.0|^11.0|^12.0|^13.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^8.0|^9.0",
+    "phpunit/phpunit": "^10.0|^11.0"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
