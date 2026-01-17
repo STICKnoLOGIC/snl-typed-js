@@ -64,6 +64,7 @@ The package will be automatically discovered by Laravel.
     font-size="2rem"
     color="#3490dc"
     cursor="_"
+    class="text-center my-4"
 />
 ```
 
@@ -106,6 +107,7 @@ The package will be automatically discovered by Laravel.
 | `cursor` | string | `\|` | Custom cursor character |
 | `font-size` | string | `1rem` | CSS font-size value |
 | `color` | string | `inherit` | CSS color value |
+| `class` | string | `null` | CSS class names for the container div |
 
 ## Publishing Views
 
