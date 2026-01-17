@@ -4,31 +4,34 @@ namespace SticknoLogic\SnlType;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
-use Illuminate\Support\Facades\View;
+use SticknoLogic\SnlType\View\Components\SnlType;
 
+/**
+ * Registers the SNL Type component and its views
+ */
 class SnlTypeServiceProvider extends ServiceProvider
 {
-    public function boot()
+    /**
+     * Bootstrap any application services.
+     */
+    public function boot(): void
     {
-        // Load package views
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'snl-type');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'snl-type');
 
-        // Register Blade component
-        Blade::component(
-            'snl-type',
-            \SticknoLogic\SnlType\View\Components\SnlType::class
-        );
+        Blade::component('snl-type', SnlType::class);
 
-        // Publish JS asset
-        $this->publishes([
-            __DIR__.'/../resources/js' => public_path('vendor/snl-type'),
-        ], 'snl-type-assets');
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__ . '/../resources/views' => resource_path('views/vendor/snl-type'),
+            ], 'snl-type-views');
+        }
+    }
 
-        // Global view awareness
-        View::composer('*', function ($view) {
-            if (app()->bound('snl-type.used')) {
-                $view->with('snlTypeScripts', true);
-            }
-        });
+    /**
+     * Register any application services.
+     */
+    public function register(): void
+    {
+        //
     }
 }
