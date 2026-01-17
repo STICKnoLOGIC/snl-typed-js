@@ -7,7 +7,7 @@ All notable changes to `snl-typed-js` will be documented in this file.
 ### Added
 - Comprehensive PHPDoc documentation
 - Support for PHP 8.0 upto latest
-- Support for Laravel 10 or latest
+- Support for Laravel 10, 11, and 12
 - Custom cursor character option
 - View publishing capability
 - Enhanced README with examples
