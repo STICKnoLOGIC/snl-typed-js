@@ -12,6 +12,10 @@ A Laravel Blade component package for creating beautiful typing animations using
 - 📦 Auto-discovery for Laravel
 - ♻️ Optimized with reusable initialization function (loaded once via @once directive)
 
+#### ads
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=sticknologic/snl-typed-js@github)](https://gitads.dev/v1/ad-track?source=sticknologic/snl-typed-js@github)
+
+
 ## Requirements
 
 - PHP 8.1 or higher
