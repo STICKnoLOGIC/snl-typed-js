@@ -1,3 +1,4 @@
+<!-- GitAds-Verify: S5QPDQZ3NU3OMU3GWOWSM4WKDG9T8MKT -->
 # SNL Typed.js - Laravel Typing Animation Component
 
 A Laravel Blade component package for creating beautiful typing animations using the Typed.js library.
